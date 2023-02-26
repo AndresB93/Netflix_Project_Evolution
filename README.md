@@ -1,4 +1,6 @@
-Netflix data Exploration and Visualization
+
+#  Netflix data Exploration and Visualization
+
 By Andrés Blanco
 
 This project was made to explore and analyze Netflix's contents since 2000 to 2020. You can find the Power BI Dashboard in the next URL:
@@ -36,3 +38,5 @@ Then i started creating this amazing dashboard that answered this simple questio
 
 
 Hope you enjoy it!
+
+<iframe title="NetflixContents" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=4a6d02f3-4413-43e6-8c08-a5903c166aa8&autoAuth=true&ctid=ba9cac45-aa67-4afd-b614-bea3e18fd4ff" frameborder="0" allowFullScreen="true"></iframe>
