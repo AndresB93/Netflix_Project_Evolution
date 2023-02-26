@@ -1,0 +1,82 @@
+--Calendario--
+
+= CALENDARAUTO()
+
+-- Año_From_Released_To_Added -- 
+
+= SUM(netflix_titles[Duration.Days Released -Added])/365
+
+--Categories Tv Shows--
+
+= CALCULATE([Count Categories], netflix_titles[type]="TV Show")
+
+-- Categories Tv Shows MIX --
+
+= [Categories Tv Shows]/[Count Categories]
+
+--Count Categories-- 
+
+= DISTINCTCOUNT(netflix_titles[listed_in])
+
+-- Description_Length--
+
+= SUM(netflix_titles[Description Length])
+
+-- Mix Directors --
+
+= [Directors TV Shows]/[Total_Directors]
+
+-- MIX_Countries--
+
+ = DIVIDE([Total_Countries], [Total_Countries_WW])
+
+-- MIX_Movies--
+
+ = DIVIDE([Total_Movies], [Total_Contents])
+
+-- MIX_TV_Show -- 
+
+= DIVIDE([Total_TV_Shows], [Total_Contents])
+
+-- Title_Lenght--
+
+ = SUM(netflix_titles[Title Length])
+
+--Total_Contents--
+
+= DISTINCTCOUNT(netflix_titles[show_id])
+
+--Total_Countries-- 
+
+= DISTINCTCOUNT(netflix_titles[Country.1])
+
+--Total_Countries_WW--
+
+= 195
+
+-- Total_Directors--
+
+ = DISTINCTCOUNT(netflix_titles[director])
+
+--Total_Movies--
+
+ = CALCULATE([Total_Contents], netflix_titles[type]="Movie")
+
+--Total_TV_Shows--
+
+ = CALCULATE([Total_Contents], netflix_titles[type]="TV Show")
+
+
+-- Categories Movies--
+
+ = CALCULATE([Count Categories], netflix_titles[type]="Movie")
+
+-- Directors Movies -- 
+
+= CALCULATE([Total_Directors], netflix_titles[type]="Movie")
+
+
+-- Mix Directors Movies --
+
+= [Directors Movies]/[Total_Directors]
+
